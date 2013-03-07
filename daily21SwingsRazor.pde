@@ -188,7 +188,7 @@ int num_gyro_errors = 0;
 
 
 // RS485 Modbus Communication
-int id = 27;              // ID of this Razor. start at 7, 8, 9, 10
+int id = 4;              // ID of this Razor. start at 7, 8, 9, 10
                          // id+= 6; happens in setup 1=>7
 
 // MODBUS MESSAGE / poll

@@ -45,48 +45,48 @@ void poll_decode() {
           output_message(id);
           break;
         case 252:                   // output pitch
-          ov = pitch - offset_pitch;
-          output_message(CLIP_DATA(DEG_TO_CHAR((WRAP(TO_DEG(ov))*scale_deg))));
+//          ov = pitch - offset_pitch;
+//          output_message(CLIP_DATA(DEG_TO_CHAR((WRAP(TO_DEG(ov))*scale_deg))));
           break;
         case 251:                   // output roll
           ov = roll - offset_roll;
           output_message(CLIP_DATA(DEG_TO_CHAR((WRAP(TO_DEG(ov))*scale_deg))));
           break;
         case 250:                   // output yaw
-          ov = yaw - offset_yaw;
-          output_message(CLIP_DATA(DEG_TO_CHAR((WRAP(TO_DEG(ov))*scale_deg))));
+//          ov = yaw - offset_yaw;
+//          output_message(CLIP_DATA(DEG_TO_CHAR((WRAP(TO_DEG(ov))*scale_deg))));
           break;
         case 249:                   // output all 3 values as floats
-          stringmsg = String((unsigned long)((pitch+50)*10000)) + String((unsigned long)((roll+50)*10000)) + String((unsigned long)((yaw+150)*10000));
-          output_message( stringmsg );
+//          stringmsg = String((unsigned long)((pitch+50)*10000)) + String((unsigned long)((roll+50)*10000)) + String((unsigned long)((yaw+150)*10000));
+//          output_message( stringmsg );
           break;
         case 248:                   // output data from all sensors (9 floats)
-          stringmsg = String((unsigned long)((accel[0]+50000)*100)) + String((unsigned long)((accel[1]+50000)*100)) + String((unsigned long)((accel[2]+50000)*100)) + String((unsigned long)((magnetom[0]+50000)*100)) + String((unsigned long)((magnetom[1]+50000)*100)) + String((unsigned long)((magnetom[2]+50000)*100)) + String((unsigned long)((gyro[0]+50000)*100)) + String((unsigned long)((gyro[1]+50000)*100)) + String((unsigned long)((gyro[2]+50000)*100));
-          output_message( stringmsg );
+//          stringmsg = String((unsigned long)((accel[0]+50000)*100)) + String((unsigned long)((accel[1]+50000)*100)) + String((unsigned long)((accel[2]+50000)*100)) + String((unsigned long)((magnetom[0]+50000)*100)) + String((unsigned long)((magnetom[1]+50000)*100)) + String((unsigned long)((magnetom[2]+50000)*100)) + String((unsigned long)((gyro[0]+50000)*100)) + String((unsigned long)((gyro[1]+50000)*100)) + String((unsigned long)((gyro[2]+50000)*100));
+//          output_message( stringmsg );
           break;
         case 247:                   // turn sensor reading on (at interval)
-          read_mode = 1;
-          output_message(read_mode);
+//          read_mode = 1;
+//          output_message(read_mode);
           break;
         case 246:                   // turn sensor reading off
-          read_mode = 0;
-          output_message(read_mode);
+//          read_mode = 0;
+//          output_message(read_mode);
           break;
         case 245:                   // set offset
-          set_offset();
-          output_message(CLIP_DATA(DEG_TO_CHAR(TO_DEG(offset_roll))));
+//          set_offset();
+//          output_message(CLIP_DATA(DEG_TO_CHAR(TO_DEG(offset_roll))));
           break;
         case 244:                   // clear offset
-          reset_offset();
-          output_message(CLIP_DATA(DEG_TO_CHAR(TO_DEG(offset_roll))));
+//          reset_offset();
+//          output_message(CLIP_DATA(DEG_TO_CHAR(TO_DEG(offset_roll))));
           break;
         case 243:                   // TESTING ONLY: scale_degree value
-          scale_deg = 0.66666666;
-          output_message(scale_deg);
+//          scale_deg = 0.66666666;
+//          output_message(scale_deg);
           break;
         case 242:                   // TESTING ONLY: scale_degree value
-          scale_deg = 2.0;
-          output_message(scale_deg);
+//          scale_deg = 2.0;
+//          output_message(scale_deg);
           break;
       } 
     }
